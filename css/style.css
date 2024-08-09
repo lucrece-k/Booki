@@ -75,7 +75,66 @@ a {
 .hebergements {
     width: 65%;
 }
+.hebergements-and-populaires {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+.hebergements-Marseille {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 30px;
+}
 
+.cards-directionrow {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+.card {
+    width: 250px;
+    height: 192px;
+}
+.card img {
+    height: 124px;
+    width: 250px;
+    border-radius: 20px 20px 0 0;
+
+}
+    
+
+/*Activité à Marseille*/
+.Activités-a-marseille {
+    display: flex;
+    flex-direction: column;
+    justify-self: flex-start;
+    align-items: flex-start;
+    width: 1340px;
+    height: 559px;
+}
+.directionrow {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    width: 1280px;
+    height: 439px;
+}
+.photo {
+    height: 439px;
+    width: 297px;
+}
+.photo img {
+    height: 380px;
+    width: 298px;
+   border-radius: 20px 20px 0 0; 
+}
+.card-photo{
+    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 20px 20px 20px 20px;
+    
+}
 /****** Populaires ***********/
 .populaires {
     width: 32%;
@@ -120,8 +179,118 @@ a {
 .populaires-cards .card-rating {
     margin-bottom: 5px;
 }
+/* entete et nav*/
+
+.logo-header img {
+    width: 61px;
+    height: 19px;
+    padding: 30px 50px 30px 50px;
+}
+.entete {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+    
+    
+}
+.lien-nav {
+   display: flex;
+   flex-direction: row;
+   padding: 0 50px 0 50px;
+   gap: 68px;
+} 
+ 
 
 
+nav a:hover{
+    color: #0065FC;
+    text-decoration: overline;
+    
+}
+
+/*section recherce*/
+#loupe-recherche{
+    visibility: hidden;
+}
+input.button{
+    color: white;
+    background-color: #0065FC;
+    border-radius: 0 20px 20px 0;
+    border: none;
+}
+
+
+#icone-localisation{
+    box-sizing: border-box;
+    background-color: #0065FC;
+    border: none;
+    border-radius:  20px 0 0 20px ;
+}   
+.bar-de-recherche{
+    border: none;
+    border-top: 1px solid #d9d9d9;
+    border-bottom: 1px solid #d9d9d9;
+}
+
+.button {
+   box-sizing: border-box;
+   border-style: solid;
+   border-width: 2px;
+   border-radius: 25px;
+   border-color: #d9d9d9;
+   padding: 4px 19px 4px 19px;
+   text-align: center;
+}
+form{
+    display: flex;
+    flex-direction: row;
+    
+}
+
+
+
+/*section filtres*/
+
+.section-filtres .button:hover {
+    background-color: #DEEBFF;
+}
+.section-filtres {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+.filtre-directionrow {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    
+    
+}
+
+
+/* footer*/
+.footer-directionrow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+
+
+}
+.footer-directioncollumn {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.section-footer {
+    background-color: var(--main-bg-color)
+}
 
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
@@ -163,5 +332,61 @@ a {
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
+    .logo-header img{
+        padding: 30px;
+    }
+    
+    
+    .entete{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    nav a:hover{
+        text-decoration: underline;
+    }  
+    .filtre-directionrow{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .section-filtres {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .directionrow {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items:flex-start ;
+    }
+    .cards-directionrow{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items:flex-start ;
+    }
+    .populaires-cards{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items:flex-start ;
+    }
+    #recherche{
+        display: none;
+    }
+    #loupe-recherche{
+        visibility: visible;
+        background-color: #0065FC;
+        border: none;
+        border-radius: 0 20px 20px 0;
+    }
+    .populaires{
+        order: -1;
+    }
+    
+    
     /* ... */
-}
