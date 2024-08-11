@@ -74,6 +74,7 @@ a {
 /****** Hebergements ***********/
 .hebergements {
     width: 65%;
+    
 }
 .hebergements-and-populaires {
     display: flex;
@@ -83,7 +84,7 @@ a {
 .hebergements {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: flex-start;
     gap: 30px;
 }
@@ -91,44 +92,62 @@ a {
 .cards-directionrow {
     display: flex;
     flex-direction: row;
-    gap: 30px;
+    gap: 20px;
 }
-
-.hebergements img {
-    height: 124px;
-    width: 250px;
-    border-radius: 20px 20px 0 0;
-
+.cards-directionrow.card {
+    background-color: white;
+    border-radius: 20px;
+    padding: 5px;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+    width: 20%;
+    
+}
+.cards-directionrow img {
+        width: 14rem;
+        height: 7.75rem;
+        border-radius: 20px 20px 0 0;
+    
 }
     
 
 /*Activité à Marseille*/
 
+.activites-a-marseille h2{
+    margin-left: 30px;
+}
+.activites-a-marseille{
+    display: flex;
+    flex-direction: column;
+
+}
 .activite-directionrow {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
-    gap: 30px;
+    gap: 10px;
     
+   
 }
-
+.cardPhoto{
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
+}
 .activites-a-marseille img {
-   width: 18.625rem;
-   height: 23.75rem;
+    width: 100%;
+    height: 90%;
    border-radius: 20px 20px 0 0; 
    
 }
-.activites-a-marseille .card{
-    width: 18.625rem;
-    height: 27.438rem;
-    
-    
+.activites-a-marseille .cardPhoto{
+    width: 18rem;
+    height: 27rem;
 }
 .activites-a-marseille p{
-    font-size: 16px;
+    font-size: 0.8rem;
     font-weight: bold;
-    margin-left: 10px;
+    padding-left: 10px;
 }
 /****** Populaires ***********/
 .populaires {
@@ -174,38 +193,47 @@ a {
 .populaires-cards .card-rating {
     margin-bottom: 5px;
 }
-/* entete et nav*/
+/* header*/
 
 .logo-header img {
     width: 61px;
     height: 19px;
     padding: 30px 50px 30px 50px;
 }
-.entete {
+header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    
+    margin: 0 10px;
     
     
 }
 .lien-nav {
    display: flex;
    flex-direction: row;
-   padding: 0 50px 0 50px;
-   
    gap: 68px;
 } 
  
-
-
 nav a:hover{
     color: #0065FC;
     text-decoration: overline;
     
 }
 
-/*section recherche*/
+/*section formulaire*/
+
+form{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    WIDTH: 27%;
+    HEIGHT: 30px;
+    
+}
+.formulaire-de-recherche{
+    WIDTH: 100%;
+    HEIGHT: 30px;
+}
 .loupe-recherche{
     visibility: hidden;
     
@@ -223,14 +251,19 @@ input.button{
     background-color: #F2F2F2;
     border: none;
     border-radius:  20px 0 0 20px ;
+    width: 12%;
 }   
 .bar-de-recherche{
     border: none;
     border-top: 1px solid #d9d9d9;
     border-bottom: 1px solid #d9d9d9;
+    width: 79%;
+}
+.recherche{
+    width: 40%;
 }
 
-.button {
+.section-filtres .button{
    box-sizing: border-box;
    border-style: solid;
    border-width: 2px;
@@ -239,13 +272,6 @@ input.button{
    padding: 4px 19px 4px 19px;
    text-align: center;
 }
-form{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    
-}
-
 
 
 /*section filtres*/
@@ -293,7 +319,7 @@ i{
     justify-content: space-between;
     align-items: flex-start;
     padding: 20px;
-    gap: 15px;
+    gap: 15PX;
     
 }
 
@@ -311,8 +337,9 @@ footer {
 @media (max-width: 1024px) {
     .hebergements-and-populaires {
         flex-direction: column;
+        align-items: center;
     }
-
+    
     .hebergements {
         width: 100%;
     }
@@ -339,61 +366,59 @@ footer {
     .populaires-cards .card-subtitle {
         font-size: 13px;
     }
-    .activites-a-marseille{
-        width: 100%;
+    .cards-directionrow{
+        gap: 65px;
     }
-    .filtre-directionrow{
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: flex-start;
-        flex-wrap: wrap;
-    
-}
-.cards-directionrow{
-    width: 30%;
-}
-
+    }
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
     .logo-header img{
         padding: 30px;
     }
     
-    
-    .entete{
+    header{
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
+    .lien-nav{
+        gap: 400px;
+    }
     nav a:hover{
         text-decoration: underline;
     }  
     
-    .filtre-directionrow {
+    .filtre-directionrow{
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
-    }
+        flex-wrap: wrap;
+        }
     .section-filtres{
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         align-items:flex-start ;
     }
+    
     .activite-directionrow {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        align-items:flex-start ;
+        align-items:center ;
+        gap: 30px;
     }
+    
     .cards-directionrow{
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        align-items:flex-start ;
+        align-items:center ;   
+    }
+    .cards-directionrow.card{
+        width: 100%;
     }
     .populaires-cards{
         display: flex;
@@ -403,6 +428,13 @@ footer {
     }
     .populaires-cards a{
         width: 100%;
+    }
+    form {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        WIDTH: 100%;
+        HEIGHT: 30px;
     }
     .recherche{
         display: none;
@@ -416,15 +448,17 @@ footer {
         border: 1px solid #0065FC;
         border-radius: 5px 10px 10px 5px;
         box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.25);
+        width: 10%;
     }
     .populaires{
         order: -1;
     }
+    
     .footer-directionrow{
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
     }
-    
+    }
     /* ... */
