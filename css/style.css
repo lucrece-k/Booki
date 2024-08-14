@@ -63,14 +63,14 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 30px;
+    align-items: center;
+    margin: 0;
     
 }
 .logo-header img {
     width: 61px;
     height: 19px;
-    padding: 30px 0;
+    
 }
 nav {
    display: flex;
@@ -80,17 +80,24 @@ nav {
 } 
 nav a{
     border-top: 2px solid transparent;
-    padding: 5px;
+    padding: 14px 0;
  }
 nav a:hover{
-    color: #0065FC;
-    border-top: 2px solid #0065FC;
+    color: var(--main-color);
+    border-top: 2px solid var(--main-color);
    
     
 }
-/* */
-h1,p{
-    margin: 0 0 0 0;
+/*page-header */
+.page-header{
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    margin-bottom: 35px;
+    margin-top: 30px;
+}
+.page-header h1, .page-header p{
+    margin: 0;
 }
 /*formulaire*/
 
@@ -98,9 +105,9 @@ form{
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    WIDTH: 30%;
-    HEIGHT: 49px;
-    margin-top: 30px;
+    width: 30%;
+    height: 49px;
+   
 }
 
 .loupe-recherche{
@@ -123,8 +130,10 @@ input.button{
     width: 15%;
 }   
 .fa-location-dot{
+    display: block;
+    margin: auto;
     color: black;
-    padding: 15px 0 5px 14px ;
+    padding: 14px;
 }
 .bar-de-recherche{
     border: none;
@@ -155,7 +164,7 @@ input.button{
      align-items: center;
      flex-wrap: wrap;
      gap: 10px;
-     margin-top: 30px;
+     
  }
  .filtre-directionrow {
      display: flex;
@@ -174,19 +183,20 @@ input.button{
     justify-content: flex-start;
     align-items: center;
     gap: 10px;
-    margin-top: 30px;
+    
  }
 
 .fa-info{
+    display: block;
+    margin: auto;
     border: 1px solid #D9D9D9;
-    border-radius: 25px; 
+    border-radius: 24px; 
     padding: 10px;
 }
 /****** Hebergements And Populaires ***********/
 .hebergements-and-populaires {
     display: flex;
     justify-content: space-between;
-    margin-top: 35px;
     margin-bottom: 35px;
 }
 
@@ -306,7 +316,7 @@ input.button{
 .activites-card{
     background-color: white;
     border-radius: 20px;
-    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
     width: 30%;
     height: 380px;
     
@@ -321,7 +331,8 @@ input.button{
 .activites-a-marseille p{
     font-size: 16px;
     font-weight: bold;
-    padding: 10px 19px;
+    padding: 0 19px;
+    margin: 0;
 }
 /* footer*/
 .footer-directionrow {
@@ -329,7 +340,6 @@ input.button{
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 20px;
     gap: 15PX;
 }
 ul{
@@ -338,6 +348,7 @@ ul{
     display: flex;
     flex-direction: column;
     padding: 20px;
+    margin: 0;
     gap: 15px;
 }
 ul :first-child{
@@ -398,7 +409,10 @@ footer {
         margin-top: 30px;
     }
     .activites-a-marseille img{
-        height: 80%;
+        height: 90%;
+    }
+    .activites-a-marseille P{
+        font-size: 12px;
     }
     }
 /* Small devices (phones, less than 768px) */
@@ -412,17 +426,18 @@ footer {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        
+        margin-bottom: 30px;
     }
     nav{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
         border-bottom: 2px solid transparent;
-       align-items: center;
+        padding: 15px 0;
     }
     nav a:hover{
-        border-bottom: 2px solid #0065FC;
+        border-bottom: 2px solid var(--main-color);
         border-top: transparent; 
-        
-        
     }  
     form {
         display: flex;
@@ -435,8 +450,9 @@ footer {
         width: 35px;
     }
     .fa-location-dot{
+        display: block;
+        margin: auto;
         color: black;
-        padding: 15px 0 5px 14px ;
     }
     .recherche{
         display: none;
@@ -449,14 +465,15 @@ footer {
         background-color: #0065FC;
         border: none;
         border-radius: 15px;
-        box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.25);
+        box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.25);
         width: 10%;
         position: relative;
         right: 13px;
     }
     .fa-search{
+        display: block;
+        margin: auto;
         color: white;
-        padding: 15px 10px;
     }
     
     .activite-directionrow {
@@ -470,7 +487,7 @@ footer {
     
     .activites-card {
         width: 100%;
-        height: 200px;
+        height: 300px;
     }
     .activites-a-marseille img{
         height: 80%;
@@ -478,8 +495,10 @@ footer {
    
     .activites-card p{
         font-size: 16px;
+        padding: 0 19px;
+        
     }
-    .cards-directionrow.card{
+    .cards-directionrow .card{
         width: 100%;
        height: 192px;
     }
@@ -512,7 +531,7 @@ footer {
     .hebergements{
         display: flex;
         flex-direction: column;
-        background-color: transparent !important;
+        background-color:transparent !important;
     }
     .footer-directionrow{
         display: flex;
